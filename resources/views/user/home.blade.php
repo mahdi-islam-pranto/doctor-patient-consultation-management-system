@@ -31,7 +31,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-info">One</span>-Health</a>
+        <a class="navbar-brand" href="#"><span class="text-info">Find</span>Doctors</a>
 
         
 
@@ -39,7 +39,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupport">
+        <div class="collapse navbar-collapse" id="navbarSupport" style="visibility: visible !important">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="index.html">Home</a>
@@ -59,8 +59,10 @@
 
             @if(Route::has('login'))
             @auth
-            
-            <h1>User has Logged in !!</h1>
+
+            <x-app-layout>
+</x-app-layout>
+            <!-- <h1>User has Logged in !!</h1> -->
 
             @else
 
@@ -87,9 +89,10 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to Your Health <br> Center</h1>
+            <h1 style="">Welcome to Your Health <br> Center</h1>
+            
             <p class="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
-            <a href="about.html" class="btn btn-info">Learn More</a>
+            <a href="about.html" class="btn btn-info">Consult With a Doctor</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">
