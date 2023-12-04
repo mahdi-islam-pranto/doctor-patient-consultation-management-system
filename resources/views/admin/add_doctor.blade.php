@@ -45,55 +45,58 @@
       <!-- partial -->
       @include('admin.navbar')
         <!-- partial -->
+        <div class="main-panel">
 
-
-        <div class="container-fluid page-body-wrapper">
 
         <h2 style="text-align: center;">Doctor Information Form</h2>
+        <center>
 
-    <form action="#" method="post" style="max-width: 600px; margin: 0 auto;">
-        <label for="doctorName" style="display: block; margin-top: 10px;">Doctor's Name:</label>
-        <input type="text" id="doctorName" name="doctorName" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
+<form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data" style="max-width: 800px; margin-left: 80;  padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
 
-        <label for="specialization" style="display: block; margin-top: 10px;">Specialization:</label>
-        <input type="text" id="specialization" name="specialization" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
+@csrf
+    
+<label for="doctorName" style="display: block; margin-top: 10px;">Doctor's Name:</label>
+    <input type="text" id="doctorName" name="doctorName" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;">
 
-        <label for="qualification" style="display: block; margin-top: 10px;">Qualification:</label>
-        <input type="text" id="qualification" name="qualification" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
+    <label for="contactNumber" style="display: block; margin-top: 10px;">Contact Number:</label>
+    <input type="tel" id="contactNumber" name="contactNumber" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;">
 
-        <label for="experience" style="display: block; margin-top: 10px;">Experience (in years):</label>
-        <input type="number" id="experience" name="experience" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
 
-        <label for="contactNumber" style="display: block; margin-top: 10px;">Contact Number:</label>
-        <input type="tel" id="contactNumber" name="contactNumber" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
+    <label for="specialization" style="display: block; margin-top: 10px;">Specialization:</label>
+    <select id="specializations" name="specialization" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #555; color: #fff;">
+        <option value="monday">--Select Specialization--</option>    
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <!-- Add more options as needed -->
+    </select>
+    <label for="roomNumber" style="display: block; margin-top: 10px;">Room Number:</label>
+    <input type="tel" id="roomNumber" name="roomNumber" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;">
 
-        <label for="email" style="display: block; margin-top: 10px;">Email:</label>
-        <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
+    <label for="doctorImage" style="display: block; margin-top: 10px;">Doctor Image</label>
+    <input type="file" id="doctorImage" name="image" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;">
 
-        <label for="hospitalAffiliation" style="display: block; margin-top: 10px;">Hospital Affiliation:</label>
-        <input type="text" id="hospitalAffiliation" name="hospitalAffiliation" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
 
-        <label for="availableDays" style="display: block; margin-top: 10px;">Available Days:</label>
-        <select id="availableDays" name="availableDays" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box;">
-            <option value="monday">Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thursday">Thursday</option>
-            <option value="friday">Friday</option>
-            <!-- Add more options as needed -->
-        </select>
+    <input type="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">
+</form>
 
-        <input type="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">
-    </form>
+</center>
+
+
+
+    <!-- <div class="content-wrapper">
+    <h5>Heloo Doctor</h5>
+      
+    </div> -->
+    <!-- content-wrapper ends --></div>
 
         
 
-        
+<H1>Heloo Doc
 
-        </div>
-
-
-
+</H1>
 
 
         <!-- @include('admin.body') -->
