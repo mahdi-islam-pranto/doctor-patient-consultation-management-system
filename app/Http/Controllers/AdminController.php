@@ -12,6 +12,7 @@ class AdminController extends Controller
     }
 
     public function upload(Request $request) {
+        
         $doctor = new doctor;
 
         $image=$request->file;
@@ -23,7 +24,6 @@ class AdminController extends Controller
         $doctor->spaciality=$request->specialization;
         $doctor->room=$request->roomNumber;
         $doctor->save();
-        
         return redirect()->back();
 
     }
