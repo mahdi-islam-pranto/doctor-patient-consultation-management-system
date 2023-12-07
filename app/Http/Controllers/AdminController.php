@@ -17,14 +17,14 @@ class AdminController extends Controller
 
         $image=$request->file;
         $imagename= time().'.'.$image->getClientOriginalExtension();
-        $request->file->move('image',$imagename);
+        $request->file->move('Doctorimage',$imagename);
         $doctor->image=$imagename;
         $doctor->name=$request->doctorName;
         $doctor->contact_number=$request->contactNumber;
         $doctor->spaciality=$request->specialization;
         $doctor->room=$request->roomNumber;
         $doctor->save();
-        return redirect()->back();
+        return redirect()->back()->with('message','Doctor Added Sucessfully');
 
     }
 }
