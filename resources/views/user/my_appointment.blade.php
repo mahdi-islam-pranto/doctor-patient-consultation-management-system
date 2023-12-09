@@ -85,7 +85,7 @@
         <td>{{$appoints->date}}</td>
         <td>{{$appoints->message}}</td>
         <td>{{$appoints->status}}</td>
-        <td><a style="background-color: red;" onclick="return confirm('Are you sure to delete this Appointment?')" class="btn btn-cancel" href="{{url('cancel_appoint',$appoints->id)}}" >Cancel</a></td>
+        <td><a style="background-color: red;" onclick="return confirm('Are you sure to Cancel this Appointment?')" class="btn btn-cancel" href="{{url('cancel_appoint',$appoints->id)}}" >Cancel</a></td>
       </tr>
 
       @endforeach

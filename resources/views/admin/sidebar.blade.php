@@ -12,7 +12,7 @@
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
-                  <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
+                  <h5 class="mb-0 font-weight-normal">Find Doctor Admin</h5>
                   <span>Gold Member</span>
                 </div>
               </div>
@@ -63,6 +63,14 @@
                 <i class="mdi mdi-file-document-box"></i>
               </span>
               <span class="menu-title">Add Doctors</span>
+            </a>
+          </li>
+          <li class="nav-item menu-items">
+            <a class="nav-link" href="{{url('showappointment')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-file-document-box"></i>
+              </span>
+              <span class="menu-title">Appointments</span>
             </a>
           </li>
         </ul>
