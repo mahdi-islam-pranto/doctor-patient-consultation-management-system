@@ -22,6 +22,34 @@
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
+    <style>
+    body {
+      /* background-color: #333; */
+      color: #fff;
+    }
+
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: #444;
+      color: #fff;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+
+    th {
+      background-color: #2C3E50; /* Dark blue-gray color */
+    }
+
+    tr:hover {
+      background-color: #555;
+    }
+  </style>
   </head>
   <body>
     <div class="container-scroller">
@@ -49,55 +77,44 @@
 
         
 
-        <h2 style="text-align: center;">Doctor Information Form</h2>
+        <h2 style="text-align: center;">All Apppointments</h2>
         <center>
 
-        @if(session()->has('message'))
-
-        <div class="alert alert-success alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">×</span>
-  </button>
-          {{session()->get('message')}}
-        </div>
-
-        @endif
-
-
-<form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data" style="max-width: 800px; margin-left: 80;  padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
-
-@csrf
-    
-<label for="doctorName" style="display: block; margin-top: 10px;">Doctor's Name:</label>
-    <input type="text" id="doctorName" name="doctorName" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
-
-    <label for="contactNumber" style="display: block; margin-top: 10px;">Contact Number:</label>
-    <input type="tel" id="contactNumber" name="contactNumber" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
-
-
-    <label for="specialization" style="display: block; margin-top: 10px;">Specialization:</label>
-    <select id="specializations" name="specialization" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #555; color: #fff;" required="">
-        <option value="General">--Select Specialization--</option>    
-        <option value="Cardiology">Cardiology</option>
-        <option value="Neurology">Neurology</option>
-        <option value="Orthopedics">Orthopedics</option>
-        <option value="Medicine">Medicine</option>
-        <option value="Dental">Dental</option>
-        <option value="Infectious diseases">Infectious diseases</option>
-        <option value="Surgery">Surgery</option>
-        <!-- Add more options as needed -->
-    </select>
-    <label for="roomNumber" style="display: block; margin-top: 10px;">Room Number:</label>
-    <input type="tel" id="roomNumber" name="roomNumber" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
-
-    <label for="doctorImage" style="display: block; margin-top: 10px;">Doctor Image</label>
-    <input type="file" id="doctorImage" name="file" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
+        <table>
+    <thead>
+      <tr>
+        <th>Doctor Name</th>
+        <th>Phone</th>
+        <th>Spaciality</th>
+        <th>Room No</th>
+        <th>Image</th>
+        <th>Delete</th>
+        <th>Update</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        @foreach($data as $doctor)
+      <tr>
+        <td>{{$doctor->name}}</td>
+        <td>{{$doctor->contact_number}}</td>
+        <td>{{$doctor->spaciality}}</td>
+        <td>{{$doctor->room}}</td>
+        <td><img height="80px" width="80px" src="Doctorimage/{{$doctor->image}}" alt=""></td>
+        <td><a class="btn btn-danger" onclick="return confirm('Are you sure to Delete this Doctor?')" href="{{url('deletedoctor',$doctor->id)}}">Delete</a></td>
+        <td><a class="btn btn-primary" href="">Update</a></td>
 
 
-    <input type="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;" required="">
-</form>
+      </tr>
+      @endforeach
+      
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
 
-</center>
+
+
+        </center>
 
 
 
