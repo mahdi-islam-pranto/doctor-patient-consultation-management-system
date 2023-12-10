@@ -64,7 +64,7 @@
         @endif
 
 
-<form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data" style="max-width: 800px; margin-left: 80;  padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+<!-- <form action="{{url('upload_doctor')}}" method="POST" enctype="multipart/form-data" style="max-width: 800px; margin-left: 80;  padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
 
 @csrf
     
@@ -95,7 +95,7 @@
 
 
     <input type="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;" required="">
-</form>
+</form> -->
 
 </center>
 
