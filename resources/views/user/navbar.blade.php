@@ -11,13 +11,13 @@
         <div class="collapse navbar-collapse" id="navbarSupport" style="visibility: visible !important">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="#welcome">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <a class="nav-link" href="#doctor">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">News</a>

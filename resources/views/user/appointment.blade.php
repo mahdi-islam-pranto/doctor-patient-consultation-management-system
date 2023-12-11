@@ -1,4 +1,4 @@
-<div class="page-section">
+<div class="page-section appointment" id="appointment">
     <div class="container">
       <h1 class="text-center wow fadeInUp" style="font-size: 2rem; font-weight: bold;">Make an Appointment</h1>
 

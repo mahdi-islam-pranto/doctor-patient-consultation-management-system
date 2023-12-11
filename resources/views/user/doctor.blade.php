@@ -1,4 +1,4 @@
-<div class="page-section">
+<div class="page-section" id="doctor">
     <div class="container">
       <h1 class="text-center mb-5 wow fadeInUp" style="font-size: 2rem; font-weight: bold;">Our Doctors</h1>
 

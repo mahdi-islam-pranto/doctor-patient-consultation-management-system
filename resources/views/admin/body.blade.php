@@ -1,27 +1,6 @@
 <div class="main-panel">
           <div class="content-wrapper">
-            <div class="row">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card corona-gradient-card">
-                  <div class="card-body py-0 px-0 px-sm-3">
-                    <div class="row align-items-center">
-                      <div class="col-4 col-sm-3 col-xl-2">
-                        <img src="admin/assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
-                      </div>
-                      <div class="col-5 col-sm-7 col-xl-8 p-0">
-                        <h4 class="mb-1 mb-sm-0">Want even more features?</h4>
-                        <p class="mb-0 font-weight-normal d-none d-sm-block">Check out our Pro version with 5 unique layouts!</p>
-                      </div>
-                      <div class="col-3 col-sm-2 col-xl-2 ps-0 text-center">
-                        <span>
-                          <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Upgrade to PRO</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <div class="row">
               <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
@@ -39,7 +18,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Potential growth</h6>
+                    <h6 class="text-muted font-weight-normal">Dortors growth</h6>
                   </div>
                 </div>
               </div>
@@ -59,7 +38,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Revenue current</h6>
+                    <h6 class="text-muted font-weight-normal">Generated Revenue</h6>
                   </div>
                 </div>
               </div>
@@ -108,11 +87,11 @@
               <div class="col-md-4 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="card-title">Transaction History</h4>
+                    <h4 class="card-title">Doctor's Growth History</h4>
                     <canvas id="transaction-history" class="transaction-chart"></canvas>
                     <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
                       <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Transfer to Paypal</h6>
+                        <h6 class="mb-1"></h6>
                         <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
@@ -121,7 +100,7 @@
                     </div>
                     <div class="bg-gray-dark d-flex d-md-block d-xl-flex flex-row py-3 px-4 px-md-3 px-xl-4 rounded mt-3">
                       <div class="text-md-center text-xl-left">
-                        <h6 class="mb-1">Tranfer to Stripe</h6>
+                        <h6 class="mb-1"></h6>
                         <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
                       </div>
                       <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
@@ -135,7 +114,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="d-flex flex-row justify-content-between">
-                      <h4 class="card-title mb-1">Open Projects</h4>
+                      <h4 class="card-title mb-1">Future works can be done</h4>
                       <p class="text-muted mb-1">Your data status</p>
                     </div>
                     <div class="row">
@@ -292,7 +271,7 @@
                 </div>
               </div>
             </div>
-            <div class="row ">
+            <!-- <div class="row ">
               <div class="col-12 grid-margin">
                 <div class="card">
                   <div class="card-body">
@@ -589,8 +568,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
+            </div> -->
+            <!-- <div class="row">
               <div class="col-12">
                 <div class="card">
                   <div class="card-body">
@@ -659,7 +638,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           <!-- content-wrapper ends -->
           <!-- partial:partials/_footer.html -->
