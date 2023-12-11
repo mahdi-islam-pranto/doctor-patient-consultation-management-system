@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/public">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,34 +23,6 @@
     <link rel="stylesheet" href="admin/assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="admin/assets/images/favicon.png" />
-    <style>
-    body {
-      /* background-color: #333; */
-      color: #fff;
-    }
-
-    table {
-      width: 80%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background-color: #444;
-      color: #fff;
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #555;
-    }
-
-    th {
-      background-color: #2C3E50; /* Dark blue-gray color */
-    }
-
-    tr:hover {
-      background-color: #555;
-    }
-  </style>
   </head>
   <body>
     <div class="container-scroller">
@@ -77,48 +50,47 @@
 
         
 
-        <h2 style="text-align: center;">All Apppointments</h2>
+        <h2 style="text-align: center;">Email Information Form</h2>
         <center>
 
-        <table>
-    <thead>
-      <tr>
-        <th>Customer name</th>
-        <th>Email</th>
-        <th>Phone</th>
-        <th>Doctor Name</th>
-        <th>Date</th>
-        <th>Message</th>
-        <th>Status</th>
-        <th>Confirm</th>
-        <th>Cancel</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-        @foreach($data as $appoint)
-      <tr>
-        <td>{{$appoint->name}}</td>
-        <td>{{$appoint->email}}</td>
-        <td>{{$appoint->phone}}</td>
-        <td>{{$appoint->doctor}}</td>
-        <td>{{$appoint->date}}</td>
-        <td>{{$appoint->message}}</td>
-        <td>{{$appoint->status}}</td>
-        <td><a  class="btn btn-success" href="{{url('approved',$appoint->id)}}" >Approve</a>
-        <a   class="btn btn-primary" href="{{url('emailview',$appoint->id)}}" >Send mail</a></td>
-        <td><a style="background-color: red;"  class="btn btn-cancel" href="{{url('canceled',$appoint->id)}}" >Cancel</a></td>
-        
-      </tr>
-      @endforeach
-      
-      <!-- Add more rows as needed -->
-    </tbody>
-  </table>
+        @if(session()->has('message'))
+
+        <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">×</span>
+  </button>
+          {{session()->get('message')}}
+        </div>
+
+        @endif
 
 
+<form action="{{url('sendemail',$data->id)}}" method="POST" enctype="multipart/form-data" style="max-width: 800px; margin-left: 80;  padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
 
-        </center>
+@csrf
+    
+<label for="doctorName" style="display: block; margin-top: 10px;">Greeting</label>
+    <input type="text" id="doctorName" name="greeting" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
+
+    <label for="contactNumber" style="display: block; margin-top: 10px;">Body</label>
+    <input type="text" id="contactNumber" name="body" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
+
+
+    
+    <label for="roomNumber" style="display: block; margin-top: 10px;">Action Text</label>
+    <input type="text" id="roomNumber" name="actiontext" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
+
+    <label for="roomNumber" style="display: block; margin-top: 10px;">Action Url</label>
+    <input type="text" id="roomNumber" name="actionurl" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
+
+    <label for="roomNumber" style="display: block; margin-top: 10px;">End Part</label>
+    <input type="text" id="roomNumber" name="endpart" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px; box-sizing: border-box; background-color: #fff; color: #000;" required="">
+
+
+    <input type="submit" value="Submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;" required="">
+</form>
+
+</center>
 
 
 
@@ -130,9 +102,7 @@
 
         
 
-<H1>Heloo Doc
 
-</H1>
 
 
         <!-- @include('admin.body') -->

@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[HomeController ::class,'index']);
-Route::get('/home',[HomeController ::class,'redirect']);
+Route::get('/home',[HomeController ::class,'redirect'])->middleware('auth','verified');
 
 
 Route::middleware([
@@ -50,3 +50,7 @@ Route::get('/canceled/{id}',[AdminController ::class,'canceled']);
 Route::get('/showdoctor',[AdminController ::class,'showdoctor']);
 
 Route::get('/deletedoctor/{id}',[AdminController ::class,'deletedoctor']);
+
+Route::get('/emailview/{id}',[AdminController ::class,'emailview']);
+
+Route::post('/sendemail/{id}',[AdminController ::class,'sendemail']);
