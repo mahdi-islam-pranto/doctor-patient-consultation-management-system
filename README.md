@@ -10,8 +10,7 @@
 ## About our Project: 
 
 Our Project is Title is Doctor Patient Consultation Manangement System. By using our project User(patient) can find doctor for his/her's preferenace times.
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
+
 
 
 
