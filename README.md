@@ -15,6 +15,11 @@ Our Project is Title is Doctor Patient Consultation Manangement System. By using
 
 
 Tech Used: 
+PHP
+Laravel
+HTML, CSS, Javascript
+Bootstrap
+Vite
 
 ## Will Update Later ... 
 Everything ...
