@@ -14,7 +14,7 @@ Our Project is Title is Doctor Patient Consultation Manangement System. By using
 
 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tech Used: 
 
 ## Will Update Later ... 
 Everything ...
