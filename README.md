@@ -19,7 +19,6 @@ PHP
 Laravel
 HTML, CSS, Javascript
 Bootstrap
-Vite
 
 ## Will Update Later ... 
 Everything ...
