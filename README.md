@@ -9,10 +9,7 @@
 
 ## About our Project: 
 
-Our Project Title is Doctor Patient Consultation Manangement System. By using our project User(patient) can find doctor for his/her's preferenace times.
-
-
-
+Our Project Title is Doctor Patient Consultation Management System. By using our project User(patient) can find doctors of his/her choice and an admin can register an appointment for the patient.
 
 Tech Used: 
 PHP
