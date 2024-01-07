@@ -21,5 +21,4 @@ HTML, CSS, Javascript
 Bootstrap
 
 ## Will Update Later ... 
-Everything ...
-Next task: UI pages (Patient/user page, doctor page, admin page)
+
