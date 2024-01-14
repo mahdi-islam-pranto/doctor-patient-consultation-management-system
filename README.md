@@ -17,5 +17,8 @@ Laravel
 HTML, CSS, Javascript
 Bootstrap
 
-## Will Update Later ... 
+## Features
+1. Login / Register
+2. Email verification
+3. 
 
