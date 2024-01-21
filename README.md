@@ -19,10 +19,11 @@ Bootstrap
 
 ## Features
 1. Login / Register
-2. Email verification
-3. Taking Appointment
+2. Email verification for user
+3. Taking Appointment by patient 
 4. Doctors list
 5. Admin Dashboard
 6. Admin Appointment verification
 7. Send Email to Patient
+
 
